@@ -53,7 +53,7 @@ CWPP其他关键市场趋势包括：
 * 向基础架构不变的思维转变。这是一种操作模型，其中不允许在生产系统上进行任何配置更改、补丁程序或软件更新。修补程序和更新将应用在基础（“黄金”）映像和图层，然后从这些映像重新构建生产工作负载并进行替换，而不是提供服务。有了不变的基础架构，CWPP保护策略将在运行时转移到对应用程序控制和容器锁定（默认拒绝/零信任）的关注上，更加着重于在部署之前扫描漏洞。在将工作负载部署到生产中之前，这些策略还将转移到在开发中构建应用程序控制/白名单模型。此概念的一个有趣扩展是内存不变性，它旨在确保在工作负载的生存期内，只有已知的合格代码才能在内存中驻留。
 * 在容器环境中，无代理思想的转变。无法保证企业能够在基于容器的部署中将代理放置在Linux主机操作系统中。锁定最小的内核和某些托管容器服务的情况越来越多。答案是提供一种体系结构选项，以将CWPP产品作为特权容器运行，一些CWPP初创公司仅关注容器的保护要求。
 * 对Kubernetes的快速适应。在过去的三年中，Kubernetes已经成为Linux容器编排的标准。一些新兴的CWPP厂商只专注于保护Kubernetes环境，支持Amazon Web Services（AWS），Microsoft Azure和Google Cloud Platform（GCP）托管的Kubernetes服务是常见的要求，同时还支持Red Hat OpenShift。
-* The shift to CWPP code layering, wrappering or insertion for protection serverless functions. In serverless PaaS environments, agents and privileged containers/sidecars will not work. New approaches are needed, such as layering in security controls,4 injection of security protection and creating a parent/child relationship from a security wrapper to the serverless function. Some CWPP startups focus only on this use case.
+* 转换为CWPP代码分层，包装或插入以保护无服务器功能。在无服务器的PaaS环境中，代理和特权容器/边车将无法工作。需要新的方法，例如在安全控制中分层，4注入安全保护以及创建从安全包装器到无服务器功能的父子关系。一些CWPP初创公司仅关注此用例。
 * 无运行时保护。对于容器和无服务器架构，如果在开发中扫描工作负载并满足基本需求(如网络分段)，为什么要在运行时保护中增加对容器/无服务器的负担?假设进行预扫描，则核心运行时保护需求（例如分段，网络监控和行为监控）可能会在工作负载之外交付。随着采用不变的基础架构以及无容器/服务器的PaaS生命周期（以分钟而不是数小时为单位），这种情况越来越多。
 * CWPP / CSPM的融合以及云原生应用程序保护平台（CNAPP）的出现。随着对CWPP的安全扫描转换到了开发阶段，扫描云配置是否存在过多风险也是有利的。我们将此风险配置扫描称为云安全状态管理。CSPM是CWPP提供者的自然衔接。
 
